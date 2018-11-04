@@ -1,0 +1,41 @@
+.footer {
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+  @include media-breakpoint-down(sm) {
+    margin-top: 0;
+  }
+
+  > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include media-breakpoint-down(sm) {
+      flex-direction: column;
+    }
+  }
+
+  .social {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+
+    @include media-breakpoint-down(sm) {
+      justify-content: center;
+      margin-top: 20px;
+    }
+  }
+
+  ul {
+    display: flex;
+
+    li {
+      margin-right: 8px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
