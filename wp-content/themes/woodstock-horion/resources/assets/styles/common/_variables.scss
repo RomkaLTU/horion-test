@@ -1,6 +1,14 @@
 /** Import Bootstrap functions */
 @import "~bootstrap/scss/functions";
 
+$font-family-sans-serif: 'Gotham', sans-serif;
+$font-family-base: $font-family-sans-serif;
+
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold:  700;
+$font-weight-base: $font-weight-light;
+
 $theme-colors: (
   primary: #525ddc
 );

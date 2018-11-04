@@ -26,6 +26,7 @@
     "extends": "stylelint-config-standard",
     "rules": {
       "no-empty-source": null,
+      "max-empty-lines": 6,
       "at-rule-no-unknown": [
         true,
         {
