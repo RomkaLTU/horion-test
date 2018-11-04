@@ -1,4 +1,5 @@
-@extends('layouts.app')
+@extends('layouts.home')
 
 @section('content')
+  test
 @stop
