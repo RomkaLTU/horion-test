@@ -3,3 +3,40 @@ ul {
   padding: 0;
   margin: 0;
 }
+
+h2,
+h3 {
+  font-family: 'BebasNeue';
+  font-weight: 700;
+}
+
+img {
+  max-width: 100%;
+}
+
+.cta {
+  width: 100%;
+  max-width: 345px;
+  padding: 30px;
+
+  @include media-breakpoint-up(md) {
+    padding-left: 60px;
+    padding-top: 60px;
+  }
+
+  h3 {
+    color: #fff;
+    font-size: 55px;
+    line-height: 60px;
+    font-weight: 700;
+    margin-bottom: 26px;
+  }
+
+  h5 {
+    font-family: 'Gotham';
+    font-size: 16px;
+    font-weight: 500;
+    color: #FFFFFF;
+    text-transform: uppercase;
+  }
+}

@@ -13,6 +13,13 @@ $theme-colors: (
   primary: #525ddc
 );
 
+$container-max-widths: (
+  sm: 540px,
+  md: 800px,
+  lg: 960px,
+  xl: 1230px
+);
+
 /** Bootstrap navbar fix (https://git.io/fADqW) */
 $navbar-dark-toggler-icon-bg: none;
 $navbar-light-toggler-icon-bg: none;

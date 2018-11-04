@@ -1,0 +1,158 @@
+.slider {
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+
+  @include media-breakpoint-up(lg) {
+    height: 839px;
+  }
+
+  > .container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .cta-big {
+    position: absolute;
+    width: 308px;
+    height: 250px;
+    bottom: 160px;
+    left: 0;
+
+    @include media-breakpoint-down(md) {
+      top: 350px;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @include media-breakpoint-down(sm) {
+      top: 200px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .btn-main {
+      width: 216px;
+      height: 53px;
+      padding-top: 10px;
+
+      @include media-breakpoint-down(md) {
+        margin: 0 auto;
+      }
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  h2 {
+    color: #fff;
+    font-size: 72px;
+    line-height: 86px;
+    font-weight: 700;
+    margin-bottom: 26px;
+  }
+}
+
+.collage {
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  > div {
+    display: flex;
+    flex-direction: column;
+
+    @include media-breakpoint-up(md) {
+      height: 1200px;
+      flex-direction: row;
+    }
+
+    @include media-breakpoint-up(lg) {
+      height: 875px;
+    }
+  }
+
+  .inner {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+  }
+
+  .left {
+    flex: 1;
+    margin-right: 10px;
+
+    @include media-breakpoint-down(sm) {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+
+  .right {
+    flex: 1;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+
+    @include media-breakpoint-down(sm) {
+      margin-left: 0;
+    }
+
+    > div {
+      flex: 1;
+    }
+
+    &-top {
+      margin-bottom: 10px;
+    }
+
+    &-bottom {
+      display: flex;
+      margin-top: 10px;
+      flex-direction: column;
+
+      @include media-breakpoint-up(lg) {
+        flex-direction: row;
+      }
+
+      > div {
+        flex: 1;
+
+        &:first-child {
+          margin-right: 0;
+          margin-bottom: 20px;
+
+          @include media-breakpoint-up(lg) {
+            margin-right: 10px;
+            margin-bottom: 0;
+          }
+        }
+
+        &:last-child {
+          margin-left: 0;
+
+          @include media-breakpoint-up(lg) {
+            margin-left: 10px;
+          }
+        }
+      }
+
+      .cta {
+        @include media-breakpoint-down(lg) {
+          padding: 30px;
+        }
+      }
+    }
+  }
+}
