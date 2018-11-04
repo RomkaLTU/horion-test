@@ -1,12 +1,14 @@
 <?php $__env->startSection('content'); ?>
-  <section class="slider" id="slider" style="background-image: url(<?= App\asset_path('images/main.jpg'); ?>)">
+  <section class="slider" id="slider" style="background-image: url(<?php echo e(!empty(get_field('background')) ? get_field('background')['sizes']['large'] : 'https://via.placeholder.com/1920x1024'); ?>)">
     <div class="container">
       <div class="cta-big">
-        <h2>
-          COME TO PLAY
-          PLAN TO STAY
-        </h2>
-        <a href="javascript:" class="btn-main">EXPLORE NOW</a>
+        <?php if( get_field('cta')['heading'] ): ?>
+          <h2><?php echo e(get_field('cta')['heading']); ?></h2>
+        <?php endif; ?>
+
+        <?php if( get_field('cta')['button_link'] ): ?>
+            <a href="<?php echo e(get_field('cta')['button_link']); ?>" class="btn-main"><?php echo e(get_field('cta')['button_text']); ?></a>
+        <?php endif; ?>
       </div>
     </div>
   </section>

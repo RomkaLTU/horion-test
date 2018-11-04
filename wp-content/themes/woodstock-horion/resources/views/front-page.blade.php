@@ -1,14 +1,16 @@
 @extends('layouts.home')
 
 @section('content')
-  <section class="slider" id="slider" style="background-image: url(@asset('images/main.jpg'))">
+  <section class="slider" id="slider" style="background-image: url({{ !empty(get_field('background')) ? get_field('background')['sizes']['large'] : 'https://via.placeholder.com/1920x1024' }})">
     <div class="container">
       <div class="cta-big">
-        <h2>
-          COME TO PLAY
-          PLAN TO STAY
-        </h2>
-        <a href="javascript:" class="btn-main">EXPLORE NOW</a>
+        @if( get_field('cta')['heading'] )
+          <h2>{{ get_field('cta')['heading'] }}</h2>
+        @endif
+
+        @if( get_field('cta')['button_link'] )
+            <a href="{{ get_field('cta')['button_link'] }}" class="btn-main">{{ get_field('cta')['button_text'] }}</a>
+        @endif
       </div>
     </div>
   </section>
